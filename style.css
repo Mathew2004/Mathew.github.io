@@ -1,0 +1,478 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #111;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/*loader*/
+.loader-bg{
+	position: fixed;
+	z-index: 9999999;
+	background-color: #111;
+	width: 100%;
+	height: 100%;
+	
+}
+.loader{
+	border: 0 solid transparent;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: calc(50vh - 75px);
+	left: calc(45vw - 70px);
+	
+}
+
+.loader:before, .loader:after{
+	content: '';
+	border: 1em solid #ff5733;
+	border-radius: 50%;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: loader 2s linear infinite;
+	opacity: 0;
+}
+.loader:before{
+	animation-delay:  0.5s;
+	
+}
+@keyframes loader{
+	0%{
+		transform: scale(0);
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+
+.logo{
+   position: absolute;
+   top: 0px;
+   left: 20px;
+}
+.navbar{
+	position: absolute;
+	top: 35px;
+	left: 50%;
+	display: flex;
+	border-left: 5px solid skyblue;
+	padding-left: 20px;
+  
+  	
+}
+	
+.navbar li{
+	list-style: none;
+	display: inline-block;
+	padding: 15px;
+}
+.navbar a{
+	text-decoration: none;
+	font-size: 1em;
+	font-family: 'MuseoModerno', cursive;
+	text-transform: uppercase;
+  	font-weight: 700;
+  	color: #111;
+  	margin-right: 30px;
+}
+.navbar a:hover{
+  color: rgb(14, 112, 96);
+
+}
+
+
+.home-body{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.profile-pic{
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    margin-bottom: 10%;
+}
+.profile-pic img{
+    border: 5px solid #222;
+    border-radius: 50%;
+}
+.profile-bio{
+    margin-left: 42%;
+    margin-top: 20%;
+}
+.profile-bio h1{
+  font-size: 44px;
+  font-family: Agency FB;
+  margin-left: -10%;
+}
+.profile-bio p{
+  font-size: 25px;
+  font-family: Agency FB;
+  padding-top: 15px;
+  padding-bottom: 10%;
+  margin-left: -5%;
+}
+
+.about{
+  align-items: center;
+  padding-bottom: 10%;
+  margin-left: 40%;
+  font-family: Agency FB;
+  font-size: 25px;
+}
+.about i{
+  padding: 10px;
+}
+.about a{
+  text-decoration: none;
+  color: white;
+}
+.about a:hover{
+  color: lightgreen;
+}
+
+/*Projects*/
+
+.projects{
+  padding-top: 20px;
+  padding-bottom: 30px;
+  
+}
+.projects .project-title{
+  text-align: center;
+  font-size: x-large;
+  font-family: 'Rowdies', cursive;
+  padding-bottom: 13%;
+}
+.main-card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 10%;
+}
+.card{
+  border: 2px solid white;
+  padding: 15px;
+}
+.continer{
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 20px;
+  font-family: Agency FB;
+}
+.continer h2{
+  padding-bottom: 20px;
+}
+.continer a{
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 50px;
+  font-weight: 900;
+}
+.continer a:hover{
+  
+  background-color: lightgreen;
+ color: #111;
+ 
+}
+.card1{
+  padding-top: 70px;
+  margin-top: 10px;
+  border: 2px solid white;
+  padding: 15px
+}
+
+/*Contact section*/
+.contact-us{
+  width: 500px;
+  background: #fff;
+  padding: 50px;
+  margin: 100px auto;
+  border-radius: 30px;
+  position: relative;
+}
+
+.title h1{
+  color: #535274;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form,
+.form-items{
+  width: 100%;
+}
+
+.form-items .input{
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  background: #ebeef1;
+  border: 0px;
+  outline: none;
+  border-radius: 30px;
+}
+
+.form-items .input.message{
+  height: 125px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  padding: 15px 15px;
+  resize: none;
+}
+
+
+.btn button{
+  width: 100%;
+  background: #827ffe;
+  text-align: center;
+  color: #fff;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: Agency FB;
+  letter-spacing: 10px;
+}
+.btn .fas{
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.form-items{
+  position: relative;
+}
+
+.form-items .fas{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #9a99aa;
+}
+
+.social-icons{
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  width: 200px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-icons div{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.social-icons div .fab{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+}
+
+.social-icons div.facebook{
+  background: #5178d9;
+}
+
+.social-icons div.twitter{
+  background: #41caf6;
+}
+
+.social-icons div.google{
+  background: #fb4f4f;
+}
+
+/*SCROLL top*/
+.back-to-top-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #D6E3F0;
+  // emoji don't behave like regular fonts
+  // so this helped position it correctly
+  padding: 0.25rem;
+}
+$scrollLength: 100vh;
+
+.back-to-top-wrapper {
+  // uncomment to visualize "track"
+  // outline: 1px solid red;
+  position: absolute;
+  top: $scrollLength;
+  left: 0.25rem;
+  // Optional, extends the final link into the 
+  // footer at the bottom of the page
+  // Set to `0` to stop at the end of `main`
+  bottom: -5em;
+  // Required for best support in browsers not supporting `sticky`
+  width: 3em;
+  // Disable interaction with this element
+  pointer-events: none;
+}
+.back-to-top-link {
+  position: fixed;
+  
+
+  pointer-events: all;
+  top: calc(100vh - 5rem);
+  margin-left: 95%;
+
+  // ... styles written earlier
+}
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 600px) {
+    body{
+      width: 100%;
+    }
+
+ /**MENU ICON**/
+
+
+ .menuicon{
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    width: 30px;
+    height: 30px;
+    background: url(menu.png);
+    filter: invert(1);
+    background-size: 40px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    z-index: 1000;
+    
+  }
+  .menuicon.active{
+    background: url(close.png);
+    filter: invert(1);
+    background-size: 30px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    z-index: 1000;
+  }
+  .navbar{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: rgba(0,0,0,.95);
+    
+    flex-direction: column;
+    z-index: 11;
+    border: none;
+    padding: 0px;
+  }
+  ul{
+  	padding:200px 80px;
+  }
+  
+  .navbar.active{
+    left: 0;
+  }
+  .navbar li{
+    margin: 5px 0;
+  }
+  .navbar a{
+    color: white;
+  }
+
+.logo{
+  margin-left: 50%;
+  margin-top: 18px;
+}
+    .profile-pic{
+      margin-left: -13%;
+      margin-top: -38%;;
+      padding-bottom: 10px;
+  }
+  .profile-pic img{
+    height: 170px;
+    width: 170px;
+    position: relative;
+  }
+  .cover-photo img{
+    height: 20%;
+    width: 105%;
+  }
+  .profile-bio{
+    padding-top: 40px;
+    margin-left: 12%;
+    margin-top: 13%;
+}
+  .profile-bio h1{
+    margin-left: 25px;
+  }
+  .about{
+    align-items: center;
+    padding-bottom: 10%;
+    margin-left: 15%;
+    font-family: Agency FB;
+    font-size: 25px;
+  }
+
+  .contact-us{
+    width: 400px;
+    background: #fff;
+    padding: 50px;
+    margin: 100px auto;
+    border-radius: 30px;
+    position: relative;
+  }
+  
+
+  .back-to-top-link {
+    position: fixed;
+    
+  
+    pointer-events: all;
+    top: calc(100vh - 5rem);
+    margin-left: 88%;
+  
+    // ... styles written earlier
+  }
+}
